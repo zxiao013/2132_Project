@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>login</title>
+<script type = "text/javascript">
+		function validate(){
+			var name = document.getElementById("name");		
+			var password = document.getElementById("password");
+			if(name.value == ""){
+				alert("Your name cannot be empty");
+				return false;
+			}
+			if(password.value == ""){
+				alert("Your password cannot be empty");
+				return false;
+			}
+			return true;
+		}
+</script>
+</head>
+<body>
+
+	
+	<h1>Welcome to eHotel</h1>
+	
+	
+	
+	<form action="login" method ="post">
+	Name : <input type = "text" name = "name"id = "name"> <br>
+	Password:<input type ="password" name = "password" id ="password"><br>
+	ID:<input type = "text" name = "id" ><br>
+	Role:<input type="radio" name="role" value = "Employee">Employee<input type = "radio" name ="role" value = "Guests">Guests<input type = "radio" name ="role" value = "Hosts">Hosts<input type = "radio" name ="role" value = "Admin">Admin<br>
+	
+	<button type ="submit" onclick = "return validate();"  name="action" value="login">login</button><br>
+	<button type = "reset">reset</button>
+	
+	<button type = "submit" name="action" value="signin">signin</button>
+	
+	</form>
+	
+</body>
+</html>
